@@ -10,17 +10,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.status.saver.graph.RootNavGraph
 import com.status.saver.ui.theme.StatusSaverTheme
+import com.status.saver.screens.SplashScreen
+import com.status.saver.screens.home.HomeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             StatusSaverTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
+              //  RootNavGraph(navHostController = rememberNavController())
+
+               HomeScreen()
             }
         }
     }
@@ -34,10 +37,10 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
     StatusSaverTheme {
-        Greeting("Android")
+      SplashScreen()
     }
 }

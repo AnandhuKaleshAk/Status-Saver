@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Status-Saver</string>
+    <string name="images">Images</string>
+    <string name="saved">Saved</string>
+    <string name="settings">Settings</string>
+    <string name="videos">Videos</string>
+    <string name="status_app">Status App</string>
 </resources>
